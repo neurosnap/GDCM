@@ -70,10 +70,9 @@ set(MODULE_NAME gdcmswig)
 # BUG: DO NOT USE -interface flag it is NOT supported in cmake and in cmake > 2.6 will cause infinite rebuild
 # Ref: http://www.cmake.org/pipermail/cmake/2008-August/023237.html
 # UseSWIG and -interface flag (was: Re: CMake 2.6.1 available for download)
-if(${PYTHON_VERSION_MAJOR} EQUAL 3)
-  # http://swig.org/Doc2.0/SWIGDocumentation.html#Python_python3support
-  set(CMAKE_SWIG_FLAGS "-py3")
-endif()
+# http://swig.org/Doc2.0/SWIGDocumentation.html#Python_python3support
+set(CMAKE_SWIG_FLAGS "-py3")
+
 # TODO: PythonInterp and PythonLibs are not working together well
 # see: http://bugs.debian.org/677598
 #message(${PYTHONLIBS_VERSION_STRING})
